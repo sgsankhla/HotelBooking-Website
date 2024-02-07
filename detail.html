@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detail</title>
+        
+        <!-- Import CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/loader.css">
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/detail.css">   
+    </head>
+    <body>
+        <div id="loader"></div>
+        <div class="main-container">
+            <!-- Added the header elements: Logo and Login Button -->
+            <header class="header-footer" id="header"></header>
+
+            <!-- Content Div -->
+            <div id="detail-container">
+                <div id="slideshow-booking">
+                    <div id="slideshow-container">
+                        <div id="carousel-controls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" id="carousel-parent"></div>
+                            <a class="carousel-control-prev" href="#carousel-controls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-controls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Added the Booking Form with all the relevant fields required -->
+                    <div id="booking-form">
+                        <form action="payment.html" method="get" autocomplete="off">
+                            <div class="outer">
+                                <label for="adult">Adults:</label>
+                                <input class="inner" type="number" name="adult" id="adult" value="1" min="1" oninput="updatePrice()" required/>
+                            </div>
+
+                            <div class="outer">
+                                <label for="name">Name:</label>
+                                <input class="inner" type="text" name="name" id="name" required/>
+                            </div>
+
+                            <div class="outer">
+                                <label for="fromDate">From Date:</label>
+                                <input class="inner" type="date" name="fromDate" id="fromDate" oninput="updatePrice()" required/>
+                            </div>
+
+                            <div class="outer">
+                                <label for="toDate">To Date:</label>
+                                <input class="inner" type="date" name="toDate" id="toDate" oninput="updatePrice()" required/>
+                            </div>
+
+                            <div class="outer">
+                                <label for="price">Total:</label>
+                                <input class="inner" type="text" name="price" id="price" readonly/>
+                                <input class="inner" type="hidden" id="id" name="id">
+                            </div>
+
+                            <div>
+                                <input type="submit" class="btn btn-outline-success" value="Book Now" id="book-now"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="hotel-description">
+                    <h2 id="hotel-name"></h2>
+                    <h5 class="heading">RATING</h5>
+                    <div id="rating">
+                        <span class="fa fa-star checked" id="1"></span>
+                        <span class="fa fa-star checked" id="2"></span>
+                        <span class="fa fa-star checked" id="3"></span>
+                        <span class="fa fa-star checked" id="4"></span>
+                        <span class="fa fa-star checked" id="5"></span>
+                    </div>
+                    <h5 class="heading">AMENITIES</h5>
+                    <ul id="amenities"></ul>
+                    <h5 class="heading" id="description">DESCRIPTION</h5>
+                </div>
+            </div>
+
+            <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+            <footer class="header-footer" id="footer"></footer>
+        </div>
+
+        <script src="scripts/common.js"></script>
+        <script src="scripts/detail.js"></script>
+    </body>
+</html>

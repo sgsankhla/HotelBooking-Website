@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        
+        <!-- Import CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="styles/loader.css">
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+
+    <body>
+        <div id="loader"></div>
+        <div class="main-container">
+            <!-- Added the header elements: Logo and Login Button -->
+            <header class="header-footer" id="header"></header>
+
+            <!-- Added the main body content: city search bar div and city lists -->
+            <div id="index-container">
+                <div id="banner">
+                    <div id="search-bar">
+                        <!-- Added form element for search bar to take input-->
+                        <!--Make sure the form has the autocomplete function switched off:-->
+                        <form autocomplete="off"> 
+                            <input id="search-input" type="text" placeholder="City"/>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="city-cards">
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Delhi">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" class="city-image">
+                            <div class='overlay'><span>Delhi</span></div>
+                        </a>
+                    </div> 
+                
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Goa">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" class="city-image">
+                            <div class='overlay'><span>Goa</span></div>
+                        </a>
+                    </div>
+                    
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Hyderabad">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" class="city-image">
+                            <div class='overlay'><span>Hyderabad</span></div>
+                        </a>
+                    </div>
+                    
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Kolkata">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" class="city-image">
+                            <div class='overlay'><span>Kolkata</span></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- More Cities -->
+                <div id="view-more-city-cards">
+                    <div class="city-cards">
+                        <div class="city-card-and-name-inner">
+                            <a href="list.html?city=Chennai">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" class="city-image">
+                                <div class='overlay'><span>Chennai</span></div>
+                            </a>
+                        </div>
+                        
+                        <div class="city-card-and-name-inner">
+                            <a href="list.html?city=Agra">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" class="city-image">
+                                <div class='overlay'><span>Agra</span></div>
+                            </a>
+                        </div>
+
+                        <div class="city-card-and-name-inner">
+                            <a href="list.html?city=Jaipur">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg" class="city-image">
+                                <div class='overlay'><span>Jaipur</span></div>
+                            </a>
+                        </div>
+                        
+                        <div class="city-card-and-name-inner">
+                            <a href="list.html?city=Bengaluru">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg" class="city-image">
+                                <div class='overlay'><span>Bengaluru</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               
+                <a id="view-more">
+                    <button id="view-more-button" type="button" class="btn btn-secondary" onclick="viewMore()">View More</button> 
+                </a>      
+            </div>
+
+            <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+            <footer class="header-footer" id="footer"></footer>
+        </div>
+
+        <script src="scripts/common.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

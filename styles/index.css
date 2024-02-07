@@ -1,0 +1,132 @@
+/* Added CSS for city image on landing page */
+#index-container {
+    display: flex;
+    flex-direction: column;
+}
+.city-cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4% 0%;
+}
+.city-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 25%;
+    box-shadow: 10px 10px 10px grey;
+}
+.city-card-and-name-inner {
+    position: relative;
+}
+/* Added CSS for background image */
+#banner{
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    /* Control the height of the image */
+    height: 380px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#search-bar {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+#search-input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+}
+#search-input:focus {
+    outline: none;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    border-radius: 25%;
+}
+.city-card-and-name-inner:hover .overlay {
+    opacity: 1;
+}
+.overlay span {
+    position:relative;
+    top:45%;
+}
+#view-more {
+    margin-bottom:7%;
+    display: flex;
+    justify-content: center;
+}
+#view-more-city-cards {
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    #search-bar {
+        width: 60%;
+    }
+    .city-cards {
+        flex-direction: column;
+        margin: auto;
+    }
+    .city-image{
+        height: 200px;
+        width: 200px;
+    }
+    .city-card-and-name-inner {
+        padding: 4% 0%;
+    }
+    #view-more {
+        margin-bottom:20%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #search-bar {
+        width: 60%;
+    }
+    .city-cards {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .city-image{
+        height: 250px;
+        width: 260px;
+    }
+    .city-card-and-name-inner {
+        padding: 4% 0%;
+    }
+}
+
+/*the container must be positioned relative:*/
+.search-items {
+    border: 1px solid #d4d4d4;
+    z-index: 99;
+    width: 100%;
+}
+.search-items div{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+    border-radius: 12px;
+}
+/*when hovering an item:*/
+.search-items div:hover {
+    background-color: #e9e9e9; 
+}
+/*when navigating through the items using the arrow keys:*/
+.search-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+}
